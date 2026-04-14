@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dayes Shop — интернет-магазин одежды и аксессуаров в Астане</title>
+  <meta name="description" content="Dayes Shop — интернет-магазин одежды и аксессуаров в Астане. Реальные фото, доставка по Астане, Kaspi, Halyk, Jysan, WhatsApp и Instagram для связи." />
+  <meta name="keywords" content="Dayes Shop, интернет-магазин, одежда, аксессуары, Астана, доставка, Kaspi, Halyk, Jysan, WhatsApp, Instagram" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Dayes Shop — интернет-магазин одежды и аксессуаров в Астане" />
+  <meta property="og:description" content="Реальные фото, честные цены и удобный заказ с доставкой по Астане. Покупайте женскую, мужскую и детскую одежду, а также аксессуары." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Dayes Shop",
+    "description": "Интернет-магазин одежды и аксессуаров в Астане. Реальные фото, доставка, WhatsApp и Instagram для связи.",
+    "url": "https://dayes-shop.kz/",
+    "telephone": "+7 778 984 0301",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Есенберлина 25",
+      "addressLocality": "Астана",
+      "addressCountry": "KZ"
+    },
+    "sameAs": [
+      "https://wa.me/77789840301",
+      "https://instagram.com/dayes_shop"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container header-inner">
+      <div class="logo">Dayes Shop</div>
+      <nav class="nav-links">
+        <a href="#home">Главная</a>
+        <a href="#products">Товары</a>
+        <a href="#secret-drop">Секрет</a>
+        <a href="#about">О нас</a>
+        <a href="#video-reviews">Видео</a>
+        <a href="#contact">Контакты</a>
+        <a href="#tech-support">Поддержка</a>
+      </nav>
+      <button class="cart-button" id="cartToggle">Корзина (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content container">
+        <div>
+          <span class="eyebrow">Интернет-магазин</span>
+          <h1>Трендовые товары с доставкой по Астане</h1>
+          <p>Реальные фото, честные цены и удобный заказ прямо сейчас.</p>
+          <div class="hero-actions">
+            <a href="#products" class="button primary">Посмотреть товары</a>
+            <a href="#contact" class="button secondary">Связаться</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Онлайн магазин" />
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products section-bg">
+      <div class="container">
+        <div class="section-header">
+          <span>Лучшие предложения</span>
+          <h2>Наш ассортимент</h2>
+          <p>Выберите товар, добавьте в корзину и оформите заказ.</p>
+        </div>
+        <div class="filters">
+          <button class="filter-btn active" data-category="all">Все</button>
+          <button class="filter-btn" data-category="Женская одежда">Женская одежда</button>
+          <button class="filter-btn" data-category="Мужская одежда">Мужская одежда</button>
+          <button class="filter-btn" data-category="Женская обувь">Женская обувь</button>
+          <button class="filter-btn" data-category="Мужская обувь">Мужская обувь</button>
+          <button class="filter-btn" data-category="Женские аксессуары">Женские аксессуары</button>
+          <button class="filter-btn" data-category="Мужские аксессуары">Мужские аксессуары</button>
+        </div>
+        <div class="cards" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section id="secret-drop" class="secret-drop section-bg">
+      <div class="container">
+        <div class="section-header">
+          <span>Секретный склад</span>
+          <h2>Только для тех, кто знает пароль</h2>
+          <p>Введите код доступа, чтобы открыть скрытые предложения и эксклюзивные скидки.</p>
+        </div>
+        <div class="secret-drop-inner">
+          <div class="secret-input">
+            <input id="secretCodeInput" type="text" placeholder="Код доступа" />
+            <button id="secretCodeButton" class="button primary">Войти</button>
+          </div>
+          <div id="secretDropContent" class="secret-drop-content hidden">
+            <div class="secret-card">
+              <h3>Черный дроп</h3>
+              <p>Только сегодня: 35% на коллекцию тёплых худи и стильных аксессуаров. Код доступа: DAYES777.</p>
+            </div>
+            <div class="secret-card">
+              <h3>Ночной прайс</h3>
+              <p>Скидка 50% на закрытые модели. Сохраните код, этот доступ даётся не всем.</p>
+            </div>
+            <div class="secret-card">
+              <h3>Код на подарок</h3>
+              <p>Введите настоящий пароль и получите бесплатную доставку по Астане внутри 2 часов.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div class="about-text">
+          <span>О магазине</span>
+          <h2>Dayes — стиль и качество</h2>
+          <p>Мы продаём только проверенные товары с отличным соотношением цены и качества. Все фотографии настоящие, доставка по Астане осуществляется быстро и безопасно.</p>
+          <ul>
+            <li>Доставка по Астане</li>
+            <li>Работаем с наложенным платежом</li>
+            <li>Поддержка в Telegram</li>
+          </ul>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <h3>Адрес</h3>
+            <p>Казахстан, Астана, ул. Есенберлина 25</p>
+          </div>
+          <div class="info-card">
+            <h3>Телефон</h3>
+            <p>+7 778 984 0301</p>
+          </div>
+          <div class="info-card">
+            <h3>Автор</h3>
+            <p>dayes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews section-bg">
+      <div class="container">
+        <div class="section-header">
+          <span>Отзывы клиентов</span>
+          <h2>Что говорят о нас</h2>
+          <p>Читайте отзывы наших довольных покупателей.</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Отличный магазин! Быстрая доставка, качественные товары. Рекомендую всем!"</p>
+            <div class="review-author">- Айгуль, Астана</div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Купила платье для дочери, очень довольна. Размеры точные, цвет как на фото."</p>
+            <div class="review-author">- Мария, Астана</div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Хороший выбор одежды для мужчин. Цены адекватные, доставка вовремя."</p>
+            <div class="review-author">- Сергей, Астана</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-bg">
+      <div class="container contact-inner">
+        <div>
+          <h2>Контакты</h2>
+          <p>Свяжитесь с нами по любым вопросам. Заказы принимаем через WhatsApp или Instagram.</p>
+          <p><strong>Телефон:</strong> +7 778 984 0301 </p>
+          <p><strong>Город:</strong> Казахстан, Астана</p>
+          <p><strong>WhatsApp:</strong> +7 778 984 0301</p>
+          <p><strong>Instagram:</strong> @dayes_shop</p>
+        </div>
+        <div class="contact-card">
+          <h3>Готовы заказать?</h3>
+          <p>Отправьте сообщение и мы подготовим вашу покупку.</p>
+          <a href="https://wa.me/77789840301" target="_blank" class="button primary">Написать в WhatsApp</a>
+          <a href="https://instagram.com/dayes_shop" target="_blank" class="button secondary">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="video-reviews" class="video-reviews section-bg">
+      <div class="container">
+        <div class="section-header">
+          <span>Видео отзывы</span>
+          <h2>Посмотрите видео отзывы наших клиентов</h2>
+          <p>Реальные клиенты показывают товары, делятся впечатлениями и качеством обслуживания.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Видео отзыв 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Видео отзыв о качестве одежды и скорости доставки.</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="Видео отзыв 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Покупательница рассказывает об удобстве заказа и выборе размера.</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" title="Видео отзыв 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Отзывы о мужских аксессуарах и обслуживании Dayes Shop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="support">
+      <div class="container support-inner">
+        <div>
+          <h2>Техническая поддержка</h2>
+          <p>Если у вас вопросы по заказу, оплате или доставке, напишите нам. Мы поможем!</p>
+          <div class="support-options">
+            <div class="support-card">
+              <h3>Статус заказа</h3>
+              <p>Проверьте, где ваш товар. Напишите номер заказа в WhatsApp.</p>
+            </div>
+            <div class="support-card">
+              <h3>Возврат и обмен</h3>
+              <p>Информация о возврате в течение 14 дней.</p>
+            </div>
+            <div class="support-card">
+              <h3>Доставка</h3>
+              <p>Узнайте сроки и стоимость доставки по Астане.</p>
+            </div>
+          </div>
+        </div>
+        <div class="order-form">
+          <h3>Оформить заказ</h3>
+          <form id="orderForm">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+            <textarea name="message" placeholder="Опишите заказ (товары, размеры, цвета)" required></textarea>
+            <button type="submit" class="button primary">Отправить заказ</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech-support" class="tech-support section-bg">
+      <div class="container">
+        <div class="section-header">
+          <span>Помощь</span>
+          <h2>Техническая поддержка</h2>
+          <p>Возникли вопросы? Напишите нам, и мы поможем решить любую проблему.</p>
+        </div>
+        <div class="tech-support-content">
+          <div class="tech-support-form">
+            <h3>Написать в поддержку</h3>
+            <form id="techSupportForm">
+              <input type="text" name="name" placeholder="Ваше имя" required>
+              <input type="email" name="email" placeholder="Email (необязательно)">
+              <input type="tel" name="phone" placeholder="Телефон" required>
+              <select name="topic" required>
+                <option value="">Выберите тему</option>
+                <option value="order">Вопрос по заказу</option>
+                <option value="payment">Проблемы с оплатой</option>
+                <option value="delivery">Доставка</option>
+                <option value="return">Возврат товара</option>
+                <option value="product">Информация о товаре</option>
+                <option value="other">Другое</option>
+              </select>
+              <textarea name="message" placeholder="Опишите вашу проблему или вопрос" required></textarea>
+              <button type="submit" class="button primary">Отправить сообщение</button>
+            </form>
+          </div>
+          <div class="tech-support-info">
+            <h3>Как мы можем помочь?</h3>
+            <ul>
+              <li>Проверка статуса заказа</li>
+              <li>Помощь с оплатой</li>
+              <li>Информация о доставке</li>
+              <li>Возврат и обмен товаров</li>
+              <li>Консультации по размерам и цветам</li>
+              <li>Технические вопросы по сайту</li>
+            </ul>
+            <p><strong>Время ответа:</strong> 1-2 часа в рабочее время</p>
+            <p><strong>Альтернативные способы связи:</strong></p>
+            <a href="https://wa.me/77789840301" target="_blank" class="button secondary">WhatsApp</a>
+            <a href="https://instagram.com/dayes_shop" target="_blank" class="button secondary">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Корзина</h3>
+      <button class="close-cart" id="closeCart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Итого: <span id="cartTotal">0</span> ₸</div>
+      <div class="payment-options">
+        <label>Способ оплаты:</label>
+        <select id="paymentMethod">
+          <option value="kaspi">Kaspi Bank</option>
+          <option value="halyk">Halyk Bank</option>
+          <option value="jysan">Jysan Bank</option>
+          <option value="cash">Наличными при получении</option>
+        </select>
+      </div>
+      <button class="button primary" id="checkoutBtn">Оформить заказ</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
